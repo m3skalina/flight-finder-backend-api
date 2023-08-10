@@ -9,7 +9,9 @@ parameters:
     # Level 9 is the highest level
     level: 5
 
-#    ignoreErrors:
+    ignoreErrors:
+        - '#Access to an undefined property App\\Http\\Resources\\[a-zA-Z0-9::a-zA-Z]#'
+
 #        - '#PHPDoc tag @var#'
 #
 #    excludePaths:
