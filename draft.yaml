@@ -1,0 +1,15 @@
+models:
+  Airport:
+    code: string:3 unique
+    name: string:255
+    lat: double:3
+    long: double:3
+
+  Flight:
+    code_departure: string:3 foreign:airports.code
+    code_arrival: string:3 foreign:airports.code
+    price: double:2
+    relationships:
+      belongsTo: Airport
+
+seeders: Airport, Flight
