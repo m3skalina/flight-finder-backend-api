@@ -8,22 +8,23 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class FlightResource extends JsonResource
 {
-
     protected $departure_airport;
+
     protected $arrival_airport;
 
     public function setDepartureAirport($departure_airport)
     {
         $this->departure_airport = $departure_airport;
+
         return $this;
     }
 
     public function setArrivalAirport($arrival_airport)
     {
         $this->arrival_airport = $arrival_airport;
+
         return $this;
     }
-
 
     /**
      * Transform the resource into an array.
