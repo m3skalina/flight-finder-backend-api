@@ -12,6 +12,10 @@ class FlightResource extends JsonResource
 
     protected $arrival_airport;
 
+    protected $stepoversCount;
+
+    protected $stepovers;
+
     public function setDepartureAirport($departure_airport)
     {
         $this->departure_airport = $departure_airport;
@@ -26,6 +30,20 @@ class FlightResource extends JsonResource
         return $this;
     }
 
+    public function setStepoversCount($stepoversCount)
+    {
+        $this->stepoversCount = $stepoversCount;
+
+        return $this;
+    }
+
+    public function setStepovers($stepovers)
+    {
+        $this->stepovers = $stepovers;
+
+        return $this;
+    }
+
     /**
      * Transform the resource into an array.
      *
@@ -36,10 +54,11 @@ class FlightResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
+            'price' => $this->price,
+            'stepoversCount' => $this->stepoversCount ?? null,
+            'stepovers' => $this->stepovers ?? null,
             'departure' => AirportResource::make($this->departure_airport),
             'arrival' => AirportResource::make($this->arrival_airport),
-            'price' => $this->price,
         ];
     }
 }
