@@ -21,12 +21,22 @@ class FlightSeeder extends Seeder
             [
                 'code_departure' => 'LAX',
                 'code_arrival' => 'FCO',
+                'price' => 600.00,
+            ],
+            [
+                'code_departure' => 'LAX',
+                'code_arrival' => 'CIA',
+                'price' => 1000.00,
+            ],
+            [
+                'code_departure' => 'LAX',
+                'code_arrival' => 'FCO',
                 'price' => 1389.00,
             ],
             [
                 'code_departure' => 'LAX',
                 'code_arrival' => 'MXP',
-                'price' => 1450.00,
+                'price' => 700.00,
             ],
             [
                 'code_departure' => 'LAX',
@@ -62,6 +72,21 @@ class FlightSeeder extends Seeder
                 'code_departure' => 'LIN',
                 'code_arrival' => 'MXP',
                 'price' => 100.00,
+            ],
+            [
+                'code_departure' => 'MXP',
+                'code_arrival' => 'LIN',
+                'price' => 25.00,
+            ],
+            [
+                'code_departure' => 'LIN',
+                'code_arrival' => 'CIA',
+                'price' => 5.00,
+            ],
+            [
+                'code_departure' => 'FCO',
+                'code_arrival' => 'CIA',
+                'price' => 10.00,
             ],
         ]);
     }

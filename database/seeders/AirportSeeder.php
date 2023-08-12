@@ -44,6 +44,12 @@ class AirportSeeder extends Seeder
                     'lat' => 0,
                     'long' => 0,
                 ],
+                [
+                    'code' => 'AMS',
+                    'name' => 'Schiphol Amsterdam Airport',
+                    'lat' => 0,
+                    'long' => 0,
+                ],
             ]
         );
     }
