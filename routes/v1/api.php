@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\v1\AirportController;
 use App\Http\Controllers\Api\v1\FlightController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/flights/search', FlightController::class);
+Route::get('/airports', AirportController::class);
